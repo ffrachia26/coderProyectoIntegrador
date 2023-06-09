@@ -1,3 +1,8 @@
 .btn-orange {
     background-color: lightcoral;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
