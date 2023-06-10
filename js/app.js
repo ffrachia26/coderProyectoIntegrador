@@ -32,12 +32,13 @@ function renderizarProductos() {
 
     productos.forEach((producto) => {
         const divCard = document.createElement('div');
-        divCard.classList.add('card','col-sm-3', 'text-center', 'py-5', 'm-2');
+        divCard.classList.add('card','col-sm-3', 'text-center', 'py-3', 'm-2');
         divCard.innerHTML += `
-    		<img src="../public/img/${producto.imagen}" alt="${producto.nombre}" />
-    		<h4>${producto.nombre}</h4>
+    		<img src="../public/img/${producto.imagen}" alt="${producto.nombre}" style="border-radius: 10px;"/>
+    		<h4 class="mt-2">${producto.nombre}</h4>
     		<p>$${producto.precio}</p>
-    		<a id=${producto.id} class="boton agregar-carrito" href="#">Agregar</a>
+            <button class="btn btn-light" type="button"><a id=${producto.id} class="boton agregar-carrito" href="#">AGREGAR</a></button>
+    		
         `;
 
         containerProducts.appendChild(divCard);
